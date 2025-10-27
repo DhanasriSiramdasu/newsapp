@@ -1,0 +1,84 @@
+{
+    "status": "ok",
+    "totalResults": 6,
+    "articles": [
+        {
+            "source": {
+                "id": "bbc-sport",
+                "name": "BBC Sport"
+            },
+            "author": null,
+            "title": "Afghanistan pulls out of cricket series after it says Pakistan air strike killed local players",
+            "description": "Pakistan said the strike targeted militants and denied attacking civilians.",
+            "url": "http://www.bbc.co.uk/news/articles/c20pnz01x0eo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ecaf/live/aaaa4a70-ac0b-11f0-a47c-6f0c4d6b53fc.jpg",
+            "publishedAt": "2025-10-18T14:37:29.4074562Z",
+            "content": "The ACB named the three players who were killed as Kabeer, Sibghatullah and Haroon, calling their deaths \"a great loss for Afghanistan's sports community, its athletes, and the cricketing family\".\r\nT… [+943 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-sport",
+                "name": "BBC Sport"
+            },
+            "author": null,
+            "title": "New Zealand vs Pakistan LIVE: Women's Cricket World Cup 2025 score & radio",
+            "description": "New Zealand face Pakistan in the ICC Women's World Cup - follow live scores and radio commentary.",
+            "url": "http://www.bbc.co.uk/sport/cricket/live/cly6d4g4dwnt",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/2467/live/15144b20-ac09-11f0-a47c-6f0c4d6b53fc.jpg",
+            "publishedAt": "2025-10-18T12:22:32.4390234Z",
+            "content": "New Zealand: Suzie Bates, Georgia Plimmer, Melie Kerr, Sophie Devine (c), Brooke Halliday, Maddy Green, Izzy Gaze (wk), Jess Kerr, Rosemary Mair, Lea Tahuhu, Eden Carson\r\nPakistan: Muneeba Ali, Omaim… [+138 chars]"
+        },
+        {
+            "source": {
+                "id": "al-jazeera-english",
+                "name": "Al Jazeera English"
+            },
+            "author": "News Agencies, Al Jazeera Staff",
+            "title": "Afghanistan accuses Pakistan of breaking truce as 10 killed in air attacks",
+            "description": "Afghanistan’s Cricket Board says three players were among those killed as violence continues despite extended truce.",
+            "url": "https://www.aljazeera.com/news/2025/10/18/afghanistan-accuses-pakistan-of-breaking-truce-as-several-killed-in-air-attacks",
+            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2025/10/reuters_68f327bf-1760765887.jpg?resize=1920%2C1440",
+            "publishedAt": "2025-10-18T06:29:51Z",
+            "content": "Pakistan has launched air attacks inside Afghanistan, killing at least 10 people and breaking a ceasefire that had brought two days of relative calm to the border after an intensive period of bloodsh… [+3390 chars]"
+        },
+        {
+            "source": {
+                "id": "news-com-au",
+                "name": "News.com.au"
+            },
+            "author": "Rebekah Scanlan",
+            "title": "23yo Aussie host is loved-up with $300m heir",
+            "description": "The daughter of a Aussie cricket legend looks smitten with her wealthy boyfriend at the Everest Cup in Sydney on Saturday.",
+            "url": "https://www.news.com.au/lifestyle/fashion/celebrity/all-the-fashion-looks-at-tab-everest-day-2025/image-gallery/f1844f8fb5cc206ae647f9b3569cde66",
+            "urlToImage": "https://content.api.news/v3/images/bin/e31e6cf5aee3acfe8a91ecbbbebb3e0e",
+            "publishedAt": "2025-10-18T01:55:00Z",
+            "content": "Aussie sport presenter Grace Hayden is among the first of the famous faces attending the TAB Everest Race Day in Sydney on Saturday October 18. Picture: Matrix\r\nThe 23-year-old daughter of cricket le… [+1390 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+            "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+            "publishedAt": "2020-04-27T11:41:47Z",
+            "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+            "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+            "publishedAt": "2020-03-30T15:26:05Z",
+            "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+        }
+    ]
+}
