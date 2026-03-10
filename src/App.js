@@ -26,7 +26,6 @@ import {
         </div>
          <Routes>
           <Route  path="/" element={<News progress={  setProgress} apikey={ apikey} key="general" pageSize={ pageSize} category="general" />}/>
-          <Route  path="/about" element={<News progress={  setProgress} apikey={ apikey}  key="about" pageSize={ pageSize} category="about"/>}/>
           <Route  path="/general" element={<News progress={  setProgress} apikey={ apikey} key="general" pageSize={ pageSize} category="general" />}/>
           <Route  path="/business" element={<News progress={  setProgress} apikey={ apikey} key="business" pageSize={ pageSize} category="business" />}/>
           <Route  path="/sports" element={<News progress={  setProgress} apikey={ apikey} key="sports" pageSize={ pageSize} category="sports" />}/>
