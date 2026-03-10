@@ -1,4 +1,4 @@
-import React, { useState,useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
@@ -8,6 +8,8 @@ const News = (props) => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 
   // Capitalize category name
   const capitalizeFirstLetter = (string) => {
@@ -19,17 +21,21 @@ const News = (props) => {
     props.progress(10);
     setLoading(true);
 
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=${props.apikey}&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=${apiKey}&page=${page}&pageSize=${props.pageSize}`;
     props.progress(30);
 
-    const data = await fetch(url);
-    props.progress(50);
+    try {
+      const data = await fetch(url);
+      if (!data.ok) throw new Error(`NewsAPI returned status ${data.status}`);
+      const parsedData = await data.json();
+      setArticles(parsedData.articles || []);
+      console.log(parsedData.articles);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+      setArticles([]);
+      setHasMore(false);
+    }
 
-    const parsedData = await data.json();
-    props.progress(80);
-
-    setArticles(parsedData.articles || []);
-    console.log(parsedData.articles);
     setLoading(false);
     props.progress(100);
   };
@@ -37,6 +43,7 @@ const News = (props) => {
   // Run once when component mounts or category changes
   useEffect(() => {
     setPage(1);
+    setHasMore(true);
     updateNews();
     // eslint-disable-next-line
   }, [props.category]);
@@ -44,22 +51,32 @@ const News = (props) => {
   // Fetch more data when scrolling
   const fetchMoreData = async () => {
     const nextPage = page + 1;
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=${props.apikey}&page=${nextPage}&pageSize=${props.pageSize}`;
-    const data = await fetch(url);
-    const parsedData = await data.json();
-    if (!parsedData.articles || parsedData.articles.length === 0) {
-      setHasMore(false);
-      return;
-    }
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=${apiKey}&page=${nextPage}&pageSize=${props.pageSize}`;
 
-    setArticles((prevArticles) => prevArticles.concat(parsedData.articles));
-    setPage(nextPage);
-    setHasMore(articles.length + parsedData.articles.length < parsedData.totalResults);
+    try {
+      const data = await fetch(url);
+      if (!data.ok) throw new Error(`NewsAPI returned status ${data.status}`);
+      const parsedData = await data.json();
+
+      if (!parsedData.articles || parsedData.articles.length === 0) {
+        setHasMore(false);
+        return;
+      }
+
+      setArticles((prev) => {
+        setHasMore(prev.length + parsedData.articles.length < parsedData.totalResults);
+        return prev.concat(parsedData.articles);
+      });
+      setPage(nextPage);
+    } catch (error) {
+      console.error("Error fetching more news:", error);
+      setHasMore(false);
+    }
   };
 
   return (
     <>
-      <div className="text-center" style={{ margin: "35px 0px" ,marginTop:'90px'}}>
+      <div className="text-center" style={{ margin: "35px 0px", marginTop: "90px" }}>
         <h1>News Bird - Top {capitalizeFirstLetter(props.category)} Headlines!</h1>
       </div>
       {loading && <Spinner />}
