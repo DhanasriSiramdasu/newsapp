@@ -28,7 +28,7 @@ const News = (props) => {
     const parsedData = await data.json();
     props.progress(80);
 
-    setArticles(parsedData.articles);
+    setArticles(parsedData.articles || []);
     console.log(parsedData.articles);
     setLoading(false);
     props.progress(100);
@@ -62,17 +62,17 @@ const News = (props) => {
       <div className="text-center" style={{ margin: "35px 0px" ,marginTop:'90px'}}>
         <h1>News Bird - Top {capitalizeFirstLetter(props.category)} Headlines!</h1>
       </div>
-      {loading}
+      {loading && <Spinner />}
 
       <InfiniteScroll
-        dataLength={articles.length}
+        dataLength={articles?.length || 0}
         next={fetchMoreData}
         hasMore={hasMore}
         loader={<Spinner />}
       >
         <div className="container">
           <div className="row">
-            {articles.map((element) => (
+            {articles?.map((element) => (
               <div className="col-md-3" key={element.url}>
                 <NewsItem
                   title={element.title || ""}
